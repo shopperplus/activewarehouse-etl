@@ -61,6 +61,10 @@ module ETL #:nodoc:
       def join
         configuration[:join]
       end
+
+      def left_join
+        configuration[:left_join]
+      end
       
       # Get the select part of the query, defaults to '*'
       def select
@@ -173,6 +177,7 @@ module ETL #:nodoc:
         return @query if @query
         q = "SELECT #{select} FROM #{@table}"
         q << " JOIN #{join}" if join
+        q << " LEFT JOIN #{left_join}" if left_join
         
         conditions = []
         if new_records_only
