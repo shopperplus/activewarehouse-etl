@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('activerecord',        '>= 3.0.0')
   s.add_runtime_dependency('fastercsv',           '>= 1.2.0')
   s.add_runtime_dependency('adapter_extensions',  '>= 0.9.5.rc1')
+  s.add_runtime_dependency('mysql57patches')
 
   s.add_development_dependency('shoulda', '~>2.11.3')
   s.add_development_dependency('flexmock', '~>0.9.0')

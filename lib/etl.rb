@@ -41,6 +41,7 @@ end
 require 'active_support'
 require 'active_record'
 require 'adapter_extensions'
+require 'mysql57patches'
 
 if ActiveSupport::VERSION::STRING >= '3.2'
   # support for cattr_accessor
